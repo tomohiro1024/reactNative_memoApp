@@ -5,7 +5,7 @@ import Hello from './src/components/Hello'
 const App = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Hello />
+      <Hello>12345</Hello>
       <Text>試しにテキストの変更してみたよ！</Text>
       <StatusBar style="auto" />
     </View>
