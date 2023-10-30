@@ -1,15 +1,18 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, type TextStyle } from 'react-native'
 
 interface Props {
   children: string
   bang?: boolean
+  style?: TextStyle
 }
 
 const Hello = (props: Props): JSX.Element => {
-  const { children, bang } = props
+  const { children, bang, style } = props
   return (
         <View>
-            <Text style={styles.text}>Hello World {children}{bang === true ? '○' : '×'}</Text>
+          <Text style={[styles.text, style]}>
+            Hello World {children}{bang === true ? '○' : '×'}
+          </Text>
         </View>
   )
 }
